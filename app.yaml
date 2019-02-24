@@ -1,0 +1,31 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+service: webapp
+handlers:
+- url: /app
+  static_files: build/index.html
+  upload: build/index.html
+- url: /app/(.*\.(gif|png|jpg|js|json))$
+  static_files: build/\1
+  upload: build/.*\.(gif|png|jpg|js|json)$
+- url: /app/static/css
+  static_dir: build/static/css
+- url: /app/static/js
+  static_dir: build/static/js
+- url: /app/static/media
+  static_dir: build/static/media
+- url: /app/.*
+  static_files: build/index.html
+  upload: build/index.html
+skip_files:
+- src/
+- node_modules/
+- ^\.git/.*
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^(.*/)?.*\.bak$
+

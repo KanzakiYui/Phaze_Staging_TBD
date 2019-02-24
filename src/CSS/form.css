@@ -1,0 +1,61 @@
+form{
+    width: 100%;
+}
+input{
+    font-size: inherit;
+}
+form>div.Inline-Input{
+    margin: auto;
+    position: relative;
+}
+form>div.Inline-Input>input,
+form>div.Inline-Input>select{
+    width: 100%;  
+    padding: 0.75rem 4rem 0.75rem 1.25rem;
+    background-color: transparent;
+}
+form>div.Inline-Input>select>option[value=""][disabled]{
+    display: none;
+}
+form>div.Inline-Input>select:required:invalid{
+    color: var(--color-white-darkest);
+  }
+  form>div.Inline-Input>label{
+    position: absolute;
+    right: 1rem;
+    top: 0.75rem;
+}
+form>div.Inline-Input>label>img{
+    height: 1.5rem;
+}
+form>div.Inline-Input>p{
+    opacity: 0;
+    text-align: left;
+    font-size: var(--font-size-small);
+    padding-left: 1.25rem;
+    color: var(--color-red-normal);
+    transition: 1s;
+}
+form>div.Inline-Input>input.Checked:invalid~p,
+form>div.Inline-Input>select.Checked:invalid~p{
+    opacity: 1;
+}
+input[type='text'],input[type='password'],input[type='email'],input[type='number'],input[type='number'],
+select{
+    border: 0;
+    border-bottom: 1px solid var(--color-black-normal);
+    outline: none;
+}
+input::placeholder{
+    color: var(--color-white-darkest);
+}
+
+input[type='text'].Checked:invalid, input[type='text'].Checked:invalid+label,
+input[type='password'].Checked:invalid, input[type='password'].Checked:invalid+label,
+input[type='email'].Checked:invalid, input[type='email'].Checked:invalid+label,
+input[type='date'].Checked:invalid, input[type='date'].Checked:invalid+label,
+input[type='number'].Checked:invalid, input[type='number'].Checked:invalid+label,
+select.Checked:invalid, select.Checked:invalid+label{
+    color: var(--color-red-normal);
+    border-bottom-color: var(--color-red-normal);
+}

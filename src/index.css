@@ -1,0 +1,51 @@
+@import './CSS/responsive.css';
+@import './CSS/bodysize.css';
+@import './CSS/fontsize.css';
+@import './CSS/color.css';
+@import './CSS/general.css';
+@import './CSS/animation.css';
+@import './CSS/buttons.css';
+@import './CSS/form.css';
+@import './CSS/scrollbar.css';
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: var(--font-size-normal);
+/*     -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+    position: relative;
+}
+#root{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/* Browsers' Default Styling Fixing */
+@-webkit-keyframes autofill {
+    to {
+        color: inherit;
+        background: transparent;
+    }
+}
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+  }
+
+  /* For IE10 */
+  select::-ms-expand {
+    display: none;
+  }

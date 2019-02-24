@@ -1,0 +1,65 @@
+#Deposit{
+    width: 100%;
+    height: 100%;
+    animation: FadeIn 1.5s;
+    background-color: transparent;
+    position: relative;
+    padding: 7rem 2.5rem 0 2.5rem;
+    position: relative;
+}
+#Deposit>p.Goback
+{
+    position: absolute;
+    top: 3rem;
+    left: 2.5rem;
+    font-weight: 600;
+}
+#Deposit>p.Goback>i{
+    margin-right: 1.5rem;
+}
+#Deposit button.Goback{
+    display: none;
+}
+@media all and (min-width: 1024px){
+    #Deposit{
+        padding: 7rem 0 0 15%;
+    }
+    #Deposit>p.Goback{
+        display: none;
+    }
+    #Deposit button.Goback{
+        width: 4rem;
+        display: inline-block;
+        text-align: center;
+        position: absolute;
+        left: calc(15% - 5rem);
+    }
+    #Deposit>button{
+        max-width: 19.2rem;
+    }
+}
+#Deposit>p.Title{
+    text-align: left;
+    font-size: var(--font-size-extra);
+    margin-bottom: 2.5rem;
+}
+#Deposit>div.CryptoCard{
+    box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+#Deposit-Address{
+    margin-top: 2rem;
+    width: 19.2rem;
+}
+#Deposit-Address>canvas{
+    height: 60% !important;
+    width: 60% !important;
+    display: block;
+    margin: auto;
+}
+#Deposit-Address>p{
+    margin-top: 1rem;
+    font-size: var(--font-size-smaller);
+}
+#Deposit>button{
+    margin-top: 2rem;
+}

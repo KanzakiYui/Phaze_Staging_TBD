@@ -1,0 +1,26 @@
+
+/* the followings are for firefox (>=64.0) */
+*{
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+}
+*:hover{
+    scrollbar-color: var(--color-white-darkest) var(--color-white-dark);
+}
+
+/* the followings are for webkit */
+::-webkit-scrollbar{
+    width: 0;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-track:hover{
+    background-color: var(--color-white-dark); 
+}
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-white-darkest); 
+}

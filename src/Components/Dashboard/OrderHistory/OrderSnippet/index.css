@@ -1,0 +1,113 @@
+div.OrderSnippet{
+    width: 90%;
+    background-color: var(--color-white-normal);
+    border-radius: 0.125rem;
+    border: 0.5px solid var(--color-white-normal);
+    box-shadow: 0 0.5rem 1rem 0.1rem rgba(21, 21, 21, 0.2);
+}
+div.OrderSnippet>div.GeneralInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1.25rem;
+}
+div.OrderSnippet>div.GeneralInfo:hover{
+    cursor: pointer;
+}
+div.OrderSnippet>div.GeneralInfo>img{
+    width: 3rem;
+}
+div.OrderSnippet>div.GeneralInfo>div:nth-child(2){
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+div.OrderSnippet>div.GeneralInfo>div:nth-child(2)>p{
+    text-align: left;
+}
+div.OrderSnippet>div.GeneralInfo>div:nth-child(2)>p:first-child{
+    font-size: var(--font-size-larger);
+}
+div.OrderSnippet>div.GeneralInfo>div:nth-child(2)>p:last-child{
+    font-size: var(--font-size-small);
+    color: #999999;
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+}
+div.OrderSnippet>div.GeneralInfo>i{
+    text-align: center;
+    color: #999999;
+}
+div.OrderSnippet>div.DetailInfo{
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+    padding: 0 1.25rem;
+}
+div.OrderSnippet>div.DetailInfo.Active.NoLink{
+    height: 22rem;
+}
+div.OrderSnippet>div.DetailInfo.Active.Link{
+    height: 18rem;
+}
+div.OrderSnippet>div.DetailInfo>p.Line{
+    border-top: 1px solid var(--color-white-dark);
+}
+div.OrderSnippet>div.DetailInfo>p.Line.First{
+    position: relative;
+    left: -7%;
+    width: 120%;                                                                            /* a temporate solution here */
+}
+div.OrderSnippet>div.DetailInfo>p.Time{
+    color: var(--color-grey-dark);
+    text-align: left;
+    font-size: var(--font-size-smallest);
+    margin: 0.5rem 0 1rem 0;
+}
+div.OrderSnippet>div.DetailInfo>div.Inline-Amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+div.OrderSnippet>div.DetailInfo>div.Inline-Amount>p:first-child,
+div.OrderSnippet>div.DetailInfo>div.Inline-Amount>p:last-child>span{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--font-size-smallest);
+    color: var(--color-white-darkest);
+}
+div.OrderSnippet>div.DetailInfo>div.Inline-Amount>p:last-child{
+    color: var(--color-black-dark);
+}
+div.OrderSnippet>div.DetailInfo>div.Inline-Amount>p.Promo{
+    font-weight: 600;
+    font-size: var(--font-size-smallest);
+}
+div.OrderSnippet>div.DetailInfo>div.Inline-Amount>p.Promo.span{
+    font-weight: 300;
+}
+div.OrderSnippet>div.DetailInfo>p.SubLine{
+    border-top: 1px solid var(--color-grey-normal);
+    width: 50%;
+    margin: 1.5rem 0 0 50%;
+}
+div.OrderSnippet>div.DetailInfo>p.Rate{
+    color: var(--color-grey-dark);
+    text-align: right;
+    font-size: var(--font-size-smallest);
+    margin-bottom: 0.5rem;
+}
+div.OrderSnippet>div.DetailInfo>div.Link>a.Link
+{
+    font-weight: 600;
+    font-size: var(--font-size-smallest);
+    text-transform: uppercase;
+    color: var(--color-blue-normal);
+}
+div.OrderSnippet>div.DetailInfo>div.Link>a.ERROR
+{
+    font-weight: 600;
+    font-size: var(--font-size-smallest);
+    text-transform: uppercase;
+}
+

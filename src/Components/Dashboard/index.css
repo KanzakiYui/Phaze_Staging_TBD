@@ -1,0 +1,237 @@
+#Dashboard{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: FadeIn 1.5s;
+    overflow-y: auto;
+}
+#Dashboard-Menu{
+    padding-left: 2.5rem;
+    position: fixed;                                                                                                    /* this part may be changed */
+    top: 2rem;
+    width: 100%;
+    height: 4rem;
+    z-index: 2;
+    background-color: white;
+}
+#Dashboard-Menu>div.Bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+#Dashboard-Menu>div.Bar i{
+    font-size: var(--font-size-large);
+}
+#Dashboard-Menu>div.Bar i:hover{
+    cursor: pointer;
+}
+#Dashboard-Menu>div.Bar>div.Controller{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#Dashboard-Menu>div.Bar>div.Controller>span{
+    margin-left: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#Dashboard-Menu>div.Bar>div.SubMenu{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-right: 2.5rem;
+    align-items: center;
+    position: relative;
+}
+#Dashboard-Menu>div.Bar>div.SubMenu i{
+    margin-left: 1.5rem;
+}
+#Dashboard-Menu>div.Bar>div.SubMenu>a.Actived{
+    color: var(--color-gold-normal);
+}
+#Dashboard-Menu>div.Bar>div.SubMenu>img{
+    margin-left: 1.5rem;
+    height: 2rem;
+}
+#Dashboard-Menu>div.Bar>div.SubMenu>img:hover{
+    cursor: pointer;
+}
+#Dashboard-Menu>div.Bar>div.Bottom{
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+#Dashboard-Menu>div.Bar>div.Bottom>img{
+    height: 2rem;
+    margin-left: 1.5rem;
+    display: none;
+}
+#Dashboard-Menu>div.Panel{
+    position: relative;
+    left: -12.5%;                                                                       /* Note this part should be calculated carefully */
+    width: 125%;                                                                     /* Note this part should be calculated carefully */
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s;
+    background-color: white;
+}
+#Dashboard-Menu>div.Panel>a{
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+#Dashboard-Menu>div.Panel.Active{
+    opacity: 1;
+    height: 8rem;
+}
+#CountrySelection{
+    animation: FadeIn 1s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 50% calc(5% + 1.5rem) 0 calc(5% + 1.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#CountrySelection>i{
+    font-size: var(--font-size-larger);
+    position: absolute;
+    top: 5rem;
+}
+#CountrySelection>i:hover{
+    cursor: pointer;
+}
+#CountrySelection>p:nth-child(2){
+    font-size: var(--font-size-extra);
+    margin-bottom: 0.5rem;
+}
+#CountrySelection>p:nth-child(3){
+    font-size: var(--font-size-extra);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+#CountrySelection>p:nth-child(4){
+    font-size: var(--font-size-normal);
+    text-align: left;
+    color: var(--color-grey-normal);
+    margin-bottom: 1rem;
+}
+
+
+
+@media all and (min-width: 1024px){
+    #Dashboard-Menu{
+        box-shadow: 0 1rem 2rem 0 var(--color-white-darkest);
+        padding: 1.5rem 0;
+        position: absolute;
+        top: calc(66rem * 0.05);                                                                                                              
+        left: 2rem;
+        width: 4rem;
+        height: calc(66rem * 0.9);                                                                                /* It will be hardcode for now */
+    }
+    #Dashboard-Menu>div.Bar{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #Dashboard-Menu>div.Bar>div.Controller{
+        padding-left: 0;
+        flex-direction: column;
+    }
+    #Dashboard-Menu>div.Bar>div.Controller>span{
+        margin-left: 0;
+        margin-top: 3rem;
+        transform: rotateZ(270deg);
+    }
+    #Dashboard-Menu>div.Bar>div.SubMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+    }
+    #Dashboard-Menu>div.Bar>div.SubMenu i{
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+    #Dashboard-Menu>div.Bar>div.SubMenu>img{
+        margin-left: 0;
+        position: absolute;
+        bottom: 0;
+    }
+    #Dashboard-Menu>div.Bar>div.Bottom{
+        flex-direction: column;
+    }
+    #Dashboard-Menu>div.Bar>div.Bottom>img{
+        display: inline-block;
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+    #Dashboard-Menu>div.Panel{
+        position: absolute;
+        top: 0;
+        left: 4rem;
+        width: 0rem;
+        height: 10rem;
+        padding: 1.5rem 0;
+        z-index: 3;
+        justify-content: space-between;
+    }
+    #Dashboard-Menu>div.Panel>a{
+        margin-top: 0;
+        margin-left: 3rem;
+    }
+    #Dashboard-Menu>div.Panel.Active{
+        height: 10rem;
+        width: 10rem;
+    }
+    #CountrySelection{
+        padding: 15% 15% 0 15%;
+    }
+    #CountrySelection>*{
+        max-width: 30rem;
+    }
+}
+
+
+/* More cases for menu bar */
+#Dashboard-Menu>div.Bar>div.SubMenu>div.Logout{
+    color: var(--color-white-darkest);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 2.5rem;
+}
+@media all and (min-width: 1024px){
+    #Dashboard-Menu>div.Bar>div.SubMenu>div.Logout{
+        position: relative;
+        right: 0;
+    }
+}
+#Dashboard-Menu>div.Bar>div.SubMenu>div.Logout:hover{
+    cursor: pointer;
+}
+#Dashboard-Menu>div.Bar>div.SubMenu>div.Logout>i{
+    margin: 0;
+}
+#Dashboard-Menu>div.Bar>div.SubMenu>div.Logout>p{
+    font-size: var(--font-size-smaller);
+}

@@ -1,0 +1,10 @@
+/* Suppose all cards' initial size is 480*300 */
+
+img.GiftCard-Simple{
+    width: auto;
+    height: 100%;
+    margin: 0 0.75rem;
+}
+img.GiftCard-Simple:hover{
+    cursor: pointer;
+}

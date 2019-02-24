@@ -1,0 +1,97 @@
+div.CryptoCard{
+    height: 12rem;                                              /* 8 : 5 */
+    width: 19.2rem;                                           
+    padding: 1.25rem 1.25rem 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.25rem;
+}
+div.CryptoCard>div:first-child{
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+}
+div.CryptoCard>div:first-child>img{
+    height: 1.5rem;
+    margin-right: 0.25rem;
+}
+div.CryptoCard>div:last-child{
+    align-self: flex-start;
+}
+div.CryptoCard>div:last-child>p{
+    text-align: left;
+}
+div.CryptoCard.Bitcoin{
+    background: linear-gradient(238deg, var(--color-grey-dark), var(--color-black-dark));
+}
+div.CryptoCard.Bitcoin>div:first-child>p{
+    font-weight: 600;
+    font-size: var(--font-size-larger);
+    color: var(--color-white-normal);
+    font-style: italic;
+}
+div.CryptoCard.Bitcoin>div:last-child>p:first-child{
+    font-size: var(--font-size-small);
+    color: var(--color-white-darkest);
+}
+div.CryptoCard.Bitcoin>div:last-child>p:last-child{
+    font-size: var(--font-size-larger);
+    color: var(--color-white-normal);
+}
+div.CryptoCard.Ethereum{
+    background: linear-gradient(238deg, var(--color-white-normal), var(--color-white-dark));
+}
+div.CryptoCard.Ethereum>div:first-child>p{
+    font-size: var(--font-size-larger);
+    letter-spacing: 0.1rem;
+}
+div.CryptoCard.Ethereum>div:last-child>p:first-child{
+    font-size: var(--font-size-small);
+    color: var(--color-grey-dark);
+}
+div.CryptoCard.Ethereum>div:last-child>p:last-child{
+    font-size: var(--font-size-larger);
+}
+div.CryptoCard.Litecoin{
+    background: linear-gradient(238deg, var(--color-egg-normal), rgb(85, 71, 64));
+}
+div.CryptoCard.Litecoin>div:first-child>p{
+    font-weight: 600;
+    font-size: var(--font-size-larger);
+    color: rgb(85, 71, 64);
+    font-style: italic;
+}
+div.CryptoCard.Litecoin>div:last-child>p:first-child{
+    font-size: var(--font-size-small);
+    color: var(--color-white-normal);
+}
+div.CryptoCard.Litecoin>div:last-child>p:last-child{
+    font-size: var(--font-size-larger);
+    color: var(--color-white-normal);
+}
+div.CryptoCard.BitcoinCash{
+    background: linear-gradient(212.19deg, rgb(230, 226, 211), var(--color-gold-normal));
+}
+div.CryptoCard.BitcoinCash>div:first-child>p{
+    font-weight: 600;
+    font-size: var(--font-size-large);
+    color: var(--color-dark-normal);
+}
+div.CryptoCard.BitcoinCash>div:first-child>img{
+    height: 1.2rem;
+    margin-right: 0.2rem;
+}
+div.CryptoCard.BitcoinCash>div:first-child>p>span{
+    color: rgb(247, 148, 29);
+}
+/* The following are placeholders*/
+div.CryptoCard.Bitcoin>div:last-child>p:first-child{
+    font-size: var(--font-size-small);
+    color: var(--color-white-darkest);
+}
+div.CryptoCard.Bitcoin>div:last-child>p:last-child{
+    font-size: var(--font-size-larger);
+    color: var(--color-white-normal);
+}

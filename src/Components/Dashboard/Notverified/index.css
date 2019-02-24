@@ -1,0 +1,44 @@
+#Notverified{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: FadeIn 1.5s;
+}
+#Notverified-Main{
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 7rem 2.5rem 0 2.5rem;
+    box-shadow: 0 0 0 0 transparent;
+}
+#Notverified-Main>img{
+    display: block;
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+#Notverified-Main>p.Title{
+    font-size: var(--font-size-largest);
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+#Notverified-Main>p.Description{
+    font-size: var(--font-size-small);
+    text-align: left;
+    color: var(--color-grey-dark);
+    margin-bottom: 2rem;
+}
+#Notverified-Main>button:last-child{
+    margin-top: 1rem;
+}
+@media all and (min-width: 768px){
+    #Notverified-Main{
+        position: absolute;
+        top:0;
+        left: 3rem;
+        width: 28rem;
+        height: 50rem;
+    }
+}

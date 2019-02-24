@@ -1,0 +1,164 @@
+#Signup{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: FadeIn 1.5s;
+}
+#Signup-Desktop-Background{
+    display: none;
+}
+#Signup-Main{
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 7rem 2.5rem 0 2.5rem;
+    box-shadow: 0 0 0 0 transparent;
+    background-color: white;
+}
+#Signup-Main>p.Goback{
+    text-align: left;
+    position: absolute;
+    color: var(--color-grey-darkest);
+    top: 2.5rem;
+    padding-right: 1rem;
+}
+#Signup-Main>p.Goback:hover{
+    cursor: pointer;
+}
+#Signup-Main>img{
+    display: block;
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+#Signup-Main>p.Title{
+    font-size: var(--font-size-largest);
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+#Signup-Main div.CheckCondition{
+    width: 100%;
+    margin: 1rem 0;
+}
+#Signup-Main div.CheckCondition>span>i{
+    color: var(--color-blue-dark);
+    font-weight: 500;
+}
+#Signup-Main div.CheckCondition>span>i:hover{
+    cursor: pointer;
+}
+#Signup-Main div.CheckCondition>input[type='checkbox']{
+    display: none;
+}
+#Signup-Main div.CheckCondition>label{
+    display: block;
+    width: 5rem;
+    height: 1.5rem;
+    background-color: var(--color-grey-normal);
+    border-radius: 0.75rem;
+    margin: 0;
+    position: relative;
+    transition: background-color 0.75s;
+    margin: 0 0.75rem 0.75rem 0;
+}
+#Signup-Main div.CheckCondition>label:hover{
+    cursor: pointer;
+}
+#Signup-Main div.CheckCondition>label>span{
+    padding: 0.75rem;
+    font-size: 0;
+    background-color: var(--color-white-normal);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 1s;
+}
+#Signup-Main div.CheckCondition>input[type='checkbox']:checked+label{
+    background-color: var(--color-blue-normal);
+}
+#Signup-Main div.CheckCondition>input[type='checkbox']:checked+label>span{
+    left: 3.5rem;
+}
+#Signup-Main div.CheckCondition>p:last-child{
+    text-align: left;
+    font-size: var(--font-size-small);
+    transition: 0.5s;
+    opacity: 0;
+    color: var(--color-red-normal);
+}
+#Signup-Main div.CheckCondition>input[type='checkbox'].Checked:checked~p{
+    opacity: 0;
+}
+#Signup-Main div.CheckCondition>input[type='checkbox'].Checked~p{
+    opacity: 1;
+}
+#Signup-Main>form>p.AuthError{
+    color: var(--color-red-normal);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#Signup-Main>form>button{
+    margin-top: 1rem;
+}
+#Signup-Main>p.Description{
+    font-size: var(--font-size-small);
+    text-align: left;
+    color: var(--color-grey-dark);
+    margin-bottom: 3rem;
+}
+@media all and (min-width: 1024px){
+    #Signup-Desktop-Background{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #Signup-Main{
+        position: absolute;
+        right: 8rem;
+        width: 28rem;
+        height: 50rem;
+        box-shadow: 0 1rem 2rem 0 rgba(55, 55, 55, 0.2);
+        /* The following margin are used to expand desktop background */
+        margin: 8rem 0;
+    }
+}
+#Signup-Desktop-Background>div.Left{
+    height: 100%;
+    width: calc(100% - 28rem);
+    background: linear-gradient(var(--color-gold-normal), var(--color-egg-normal));
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-black-dark);
+}
+#Signup-Desktop-Background>div.Left>p.Title{
+    font-size: var(--font-size-extra);
+    text-align: left;
+    margin-bottom: 3rem;
+}
+#Signup-Desktop-Background>div.Left>p.Description{
+    width: 75%;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+#Signup-Desktop-Background>div.Left>div.Row>img{
+    margin: 0 1rem 1rem 0;
+    height: 6rem;
+}
+#Signup-Desktop-Background>div.Right{
+    height: 100%;
+    width: 28rem;
+}
+#Signup-Desktop-Background>div.Left>div.Picture{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+#Signup-Desktop-Background>div.Left>div.Picture>img{
+    height: 15rem;
+}

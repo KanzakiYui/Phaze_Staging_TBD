@@ -1,0 +1,21 @@
+body *{
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box !important;
+    line-height: 1.5 !important;
+    -webkit-tap-highlight-color: transparent;
+    outline: none !important;
+}
+p{
+    text-align: center;
+}
+a{
+    color: inherit;
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

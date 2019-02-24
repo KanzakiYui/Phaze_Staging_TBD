@@ -1,0 +1,225 @@
+#Payment{
+    width: 100%;
+    height: 100%;
+    animation: FadeIn 1.5s;
+    background-color: transparent;
+    position: relative;
+    padding: 7rem 0 0 2.5rem;
+    position: relative;
+}
+#Payment-Background{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgb(231, 231, 231);
+    width: 5rem;
+    height: 66.67%;
+}
+#Payment>p.Title{
+    font-size: var(--font-size-extra);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+@media all and (min-width: 1024px){
+    #Payment{
+        padding: 7rem 0 0 15%;
+    }
+    #Payment-Background{
+        height: 100%;
+        width: calc(15% + 3rem);
+    }
+}
+#Payment>div.Denomination-Content{
+    white-space: nowrap;
+    height: 13rem;
+    padding-bottom: 1rem;
+    /* overflow: auto hidden; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+#Payment>div.Denomination-Content>img{
+    height: 100%;
+    margin: 0 2rem 0 0;
+    filter: drop-shadow(0.5rem 0.25rem 0.25rem var(--color-white-darkest));
+}
+#Payment>div.Denomination-Content>img:last-child{
+    margin-right: calc(100vw - 2.5rem - 19.2rem);
+}
+@media all and (min-width: 1024px){
+    #Payment>div.Denomination-Content>img:last-child{
+        margin-right: calc(85vw - 19.2rem + 0.5rem);                                 /* 19.2 - 0.5  = 18.7 since there is a shadow on the card? */
+    }
+}
+#Payment>div.DetailPanel{
+    margin-top: 2rem;
+}
+#Payment>div.DetailPanel>div{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#Payment>div.DetailPanel>div>*:first-child{
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#Payment>div.DetailPanel>div>*:nth-child(2){
+    width: 2rem;
+    padding-left: 1rem;
+}
+#Payment>div.DetailPanel>div:first-child>span:last-child,
+#Payment>div.DetailPanel>div:nth-child(2)>span:last-child{
+    padding-left: 3rem;
+}
+#Payment>div.DetailPanel>div:last-child>span:nth-child(3){
+    padding-left: 1rem;
+}
+#Payment>div.DetailPanel>div:last-child>span:nth-child(3)>i{
+    color: var(--color-grey-normal) !important;
+}
+#Payment>div.DetailPanel>div:last-child>span:nth-child(3)>i:hover{
+    cursor: pointer;
+}
+#Payment>div.DetailPanel>div:last-child{
+    transition: 1s;
+}
+#Payment>div.DetailPanel>div:last-child img{
+    width: 1.25rem;
+}
+#Payment>div.DetailPanel>div:last-child{
+    color: var(--color-grey-normal);
+    position: relative;
+}
+#Payment>div.DetailPanel>div:last-child.Apply{
+    color: var(--color-blue-normal);
+}
+#Payment>div.DetailPanel>div:last-child>span:nth-child(3)>i{
+    margin-right: 1rem;
+}
+#Payment>div.DetailPanel button{
+    position: absolute;
+    left: 15rem;
+    padding: 0.5rem;
+    border: 0 !important;
+    background-color: var(--color-white-dark);
+    box-shadow: 0 0 0 0 transparent;
+    max-width: 8rem;
+    font-size: var(--font-size-smallest);
+}
+#Payment>div.DetailPanel button.Apply{
+    background-color: var(--color-blue-normal);
+    color: var(--color-white-normal);
+}
+#Payment>div.DetailPanel button.Disabled{
+    justify-content: center;
+}
+#Payment>div.DetailPanel button.Disabled:hover{
+    cursor: not-allowed;
+}
+#Payment>div.Total{
+    margin: 2rem 0 5rem 3.5rem;
+}
+#Payment>div.Total>span:first-child{
+    font-size: var(--font-size-smallest);
+    margin-right: 2.5rem;
+}
+#Payment>div.Total small{
+    font-size: var(--font-size-smallest);
+    color: var(--color-grey-normal);
+}
+#Payment>button.Confirm{
+    width: 15rem;
+}
+#Payment>p.Goback{
+    position: absolute;
+    top: 3rem;
+    left: 2.5rem;
+    font-weight: 600;
+}
+#Payment>p.Goback>i{
+    margin-right: 1.5rem;
+}
+#Payment>button.Goback{
+    display: none;
+}
+@media all and (min-width: 1024px){
+    #Payment>p.Goback{
+        display: none;
+    }
+    #Payment>button.Goback{
+        width: 4rem;
+        display: inline-block;
+        text-align: center;
+        position: absolute;
+        left: calc(15% - 5rem);
+    }
+}
+
+
+#Payment-CreditNote{
+    animation: FadeIn 1s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 50% calc(5% + 1.5rem) 0 calc(5% + 1.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#Payment-CreditNote>i{
+    font-size: var(--font-size-larger);
+    position: absolute;
+    top: 5rem;
+}
+#Payment-CreditNote>i:hover{
+    cursor: pointer;
+}
+#Payment-CreditNote>p{
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+@media all and (min-width: 1024px){
+    #Payment-CreditNote{
+        padding: 10% 15% 0 15%;
+    }
+    #Payment-CreditNote>p{
+        max-width: 19.2rem;
+    }
+}
+#Payment-CreditNote>p.Title{
+    text-align: left;
+    font-size: var(--font-size-extra);
+    margin-bottom: 1rem;
+}
+#Payment-CreditNote>p>span{
+    color: var(--color-blue-normal);
+    font-weight: 600;
+}
+#Payment>div.Range-Content>img{
+    height: 12rem;
+    margin: 0;
+    filter: drop-shadow(0rem 0.25rem 0.125rem var(--color-white-darkest));
+}
+#Payment>div.DetailPanel>div>div.Range-Input>input{
+    margin: 0 0.25rem;
+    padding: 0.25rem 0.5rem;
+    width: 6rem;
+    text-align: center;
+}
+#Payment>div.DetailPanel>div>div.Range-Input>input.Error{
+    color: var(--color-red-normal);
+    border-bottom-color: var(--color-red-normal);
+}
+#Payment>div.DetailPanel>div>div.Range-Input>p.Error{
+    color: var(--color-red-normal);
+    font-size: var(--font-size-smallest);
+}

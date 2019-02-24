@@ -1,0 +1,5 @@
+dispatch:
+  - url: '*/app'
+    service: webapp
+  - url: '*/app/*'
+    service: webapp

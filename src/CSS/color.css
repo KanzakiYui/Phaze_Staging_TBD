@@ -1,0 +1,31 @@
+:root{
+    /* Blue sets */
+    --color-blue-light: rgb(90, 177, 252);
+    --color-blue-normal: rgb(21, 61, 232);
+    --color-blue-dark: rgb(17, 42, 149);
+    --color-blue-darkest: rgb(5, 14, 79);
+
+    /* Gold/Yellow sets */
+    --color-gold-light:rgb(236, 231, 88);
+    --color-gold-normal: rgb(214, 176, 116);
+    --color-gold-dark: rgb(154, 148, 124);
+
+    /* White sets */
+    --color-white-normal: rgb(246, 246, 246);
+    --color-white-dark: rgb(224, 224, 224);
+    --color-white-darkest: rgb(184, 184, 184);
+
+    /* Grey sets */
+    --color-grey-normal: rgb(154, 154, 154);
+    --color-grey-dark: rgb(124, 124, 124);
+    --color-grey-darkest: rgb(85, 85, 85);
+
+    /* Black sets */
+    --color-black-normal: rgb(55, 55, 55);
+    --color-black-dark: rgb(21, 21, 21);
+
+    /*Other colors*/
+    --color-red-normal: rgb(232, 21, 93);
+    --color-green-normal: rgb(21, 232, 97);
+    --color-egg-normal: rgb(230, 226, 211);
+}

@@ -1,0 +1,26 @@
+
+div.LoadingScreen{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-super);
+    font-weight: 400;
+    font-size: var(--font-size-large);
+    z-index: 2;
+    background: linear-gradient(var(--color-white-normal), var(--color-white-dark));
+    color: var(--color-red-normal);
+}
+div.LoadingScreen>span{
+    margin-right: 1.5rem;
+}
+div.LoadingScreen>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,56 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:10.13.0
+
+options:
+  max-time: 10
+
+pipelines:
+  default:
+    - step:
+        name: Install tools and dercrypt
+        caches:
+          - node
+        script: #install gcloud tools for decryption of encrypted files
+          - curl -o /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-226.0.0-linux-x86_64.tar.gz
+          - tar -xvf /tmp/google-cloud-sdk.tar.gz -C /tmp/
+          - /tmp/google-cloud-sdk/install.sh -q
+          - source /tmp/google-cloud-sdk/path.bash.inc
+          # Authenticating with the service account key file
+          - echo $GCLOUD_API_KEYFILE | base64 --decode --ignore-garbage > ./gcloud-api-key.json
+          - gcloud auth activate-service-account --key-file gcloud-api-key.json
+          # Linking to the Google Cloud project
+          - gcloud config set project $GCLOUD_PROJECT
+          - node --version
+          - npm install
+          - ls -la
+        artifacts:
+          - '**'
+    - step:
+        name: Test
+        caches:
+          - node
+        script: 
+          - ls -la
+          - npm run build
+        artifacts:
+          - '**'
+    - step:
+        name: Deploy
+        deployment: staging
+        trigger: manual
+        script: 
+          - curl -o /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-226.0.0-linux-x86_64.tar.gz
+          - tar -xvf /tmp/google-cloud-sdk.tar.gz -C /tmp/
+          - /tmp/google-cloud-sdk/install.sh -q
+          - source /tmp/google-cloud-sdk/path.bash.inc
+          # Authenticating with the service account key file
+          - echo $GCLOUD_API_KEYFILE | base64 --decode --ignore-garbage > ./gcloud-api-key.json
+          - gcloud auth activate-service-account --key-file gcloud-api-key.json
+          # Linking to the Google Cloud project
+          - gcloud config set project $GCLOUD_PROJECT
+          # Deploying the application
+          - gcloud -q app deploy app.yaml

@@ -1,0 +1,28 @@
+#EmailVerify{
+    width: 100%;
+    height: 100%;
+    padding: 5rem 2.5rem 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+@media all and (min-width: 1024px){
+    #EmailVerify{
+        padding: 10% 0 0 15%;
+    }
+    #EmailVerify>*{
+        width: 24rem;
+    }
+}
+#EmailVerify>p{
+    text-align: left;
+}
+#EmailVerify>p:first-child{
+    font-size: var(--font-size-extra);
+    margin-bottom: 2rem;
+}
+#EmailVerify>p:nth-child(2){
+    margin-bottom: 2rem;
+}

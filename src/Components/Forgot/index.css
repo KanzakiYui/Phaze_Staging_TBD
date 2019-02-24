@@ -1,0 +1,108 @@
+#Forgot{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: FadeIn 1.5s;
+}
+#Forgot-Desktop-Background{
+    display: none;
+}
+#Forgot-Main{
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 7rem 2.5rem 0 2.5rem;
+    box-shadow: 0 0 0 0 transparent;
+    background-color: white;
+}
+#Forgot-Main>p.Goback{
+    text-align: left;
+    position: absolute;
+    color: var(--color-grey-darkest);
+    top: 2.5rem;
+    padding-right: 1rem;
+}
+#Forgot-Main>p.Goback:hover{
+    cursor: pointer;
+}
+#Forgot-Main>img{
+    display: block;
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+#Forgot-Main>p.Title{
+    font-size: var(--font-size-largest);
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+#Forgot-Main>p.Description{
+    font-size: var(--font-size-small);
+    text-align: left;
+    color: var(--color-grey-dark);
+    margin-bottom: 2rem;
+}
+#Forgot-Main>form>p.AuthError{
+    color: var(--color-red-normal);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#Forgot-Main>form>button[type='submit']{
+    margin-top: 1.5rem;
+}
+@media all and (min-width: 1024px){
+    #Forgot-Desktop-Background{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #Forgot-Main{
+        position: absolute;
+        right: 8rem;
+        width: 28rem;
+        height: 50rem;
+        box-shadow: 0 1rem 2rem 0 rgba(55, 55, 55, 0.2);
+        margin: 8rem 0;
+    }
+}
+#Forgot-Desktop-Background>div.Left{
+    height: 100%;
+    width: calc(100% - 28rem);
+    background: linear-gradient(rgb(154,148,124) , rgb(230,226,211));
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-black-dark);
+}
+#Forgot-Desktop-Background>div.Left>p.Title{
+    font-size: var(--font-size-extra);
+    text-align: left;
+    margin-bottom: 3rem;
+}
+#Forgot-Desktop-Background>div.Left>p.Description{
+    width: 75%;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+#Forgot-Desktop-Background>div.Left>div.Row>img{
+    margin: 0 1rem 1rem 0;
+    height: 6rem;
+}
+#Forgot-Desktop-Background>div.Right{
+    height: 100%;
+    width: 28rem;
+}
+#Forgot-Desktop-Background>div.Left>div.Picture{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+#Forgot-Desktop-Background>div.Left>div.Picture>img{
+    height: 15rem;
+}
+
+

@@ -1,0 +1,182 @@
+#Identity{
+    width: 100%;
+    height: 100%;
+    animation: FadeIn 1.5s;
+    background-color: transparent;
+    position: relative;
+    padding: 7rem 2.5rem 0 2.5rem;
+    position: relative;
+}
+@media all and (min-width: 1024px){
+    #Identity{
+        padding: 7rem 0 0 15%;
+    }
+    #Identity>div{
+        max-width: 19.2rem;
+    }
+}
+#Identity>p.Goback{
+    position: absolute;
+    top: 3rem;
+    left: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#Identity>p.Goback>i{
+    margin-right: 1.5rem;
+}
+#Identity button.Goback{
+    display: none;
+}
+@media all and (min-width: 1024px){
+    #Identity>p.Goback{
+        display: none;
+    }
+    #Identity button.Goback{
+        width: 4rem;
+        display: inline-block;
+        text-align: center;
+        position: absolute;
+        left: calc(15% - 5rem);
+    }
+}
+#Identity>p.Title{
+    font-size: var(--font-size-normal);
+    text-align: left;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+}
+#Identity-Legal>p{
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+#Identity-Legal>p.Title{
+    text-align: left;
+    font-size: var(--font-size-extra);
+    text-transform: capitalize;
+}
+#Identity-Legal>button{
+    margin-top: 2.5rem;
+}
+#Identity-Bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5rem 0;
+}
+#Identity-Bar>p{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    border: 1px solid transparent;
+    transition: 0.75s;
+}
+#Identity-Bar>p>span{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-white-dark);
+    transition: 0.75s;
+}
+#Identity-Bar>p.Active{
+    border-color: var(--color-black-normal);
+}
+#Identity-Bar>p.Active>span{
+    background-color: var(--color-black-normal);
+}
+#Identity p.Step-Title{
+    text-align: left;
+    font-size: var(--font-size-extra);
+    margin-bottom: 2rem;
+}
+#Identity-Name form>button,
+#Identity-Country form>button,
+#Identity-Phone form>button,
+#Identity-Code form>button{
+    margin-top: 2rem;
+}
+#Identity form>p.AuthError{
+    color: var(--color-red-normal);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#Identity-Photo>p{
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+#Identity-Photo p.FileName{
+    margin-bottom: 0;
+}
+#Identity-Photo>label.Upload{
+    border-radius: 0.125rem;
+    padding: 1.25rem;
+    box-shadow: 0 1rem 2rem 0.1rem rgba(21, 21, 21, 0.2);
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+    transition: 1s;
+    background-color: var(--color-white-normal);
+    border: 0.5px solid var(--color-white-normal);
+    color: var(--color-black-dark);
+}
+#Identity-Photo>label.Upload:hover{
+    cursor: pointer;
+    background-color: var(--color-white-dark);
+    border: 0.5px solid var(--color-white-dark);
+}
+#Identity-Photo>label.Upload>input[type='file']{
+    display: none;
+}
+#Identity-Photo button{
+    margin-top: 2rem;
+}
+#Identity-Photo button.button-2>div{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#Identity-Photo svg{
+    display: block;
+    margin: 3rem auto 0 auto;
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+}
+#Identity-Photo p.ErrorMessage{
+    margin-top: 2rem;
+    color: var(--color-red-normal);
+}
+#Identity>div.Success>img{
+    display: block;
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+#Identity>div.Success>p{
+    font-size: var(--font-size-large);
+    text-align: left;
+}
+#Identity>div.Success>p.Title{
+    margin: 3rem 0 1rem 0;
+    font-size: var(--font-size-extra);
+    text-align: left;
+}
+#Identity>div.Success>button{
+    margin-top: 3rem;
+}
+/*
+    The following adjustments may be changed
+*/
+#Identity-Legal button.Goback{
+    margin-top: 1rem;
+}
+#Identity-Name button.Goback{
+    margin-top: 2rem;
+}
